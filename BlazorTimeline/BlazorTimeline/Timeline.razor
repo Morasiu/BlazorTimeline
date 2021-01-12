@@ -1,0 +1,73 @@
+﻿<div class="container">
+    <h1 class="project-name">@Title</h1>
+    <div id="timeline" style=":before ">
+        <CascadingValue Name="TitleBgColor" Value="@TitleBgColor">
+            <CascadingValue Name="TitleColor" Value="@TitleColor">
+                <CascadingValue Name="TextColor" Value="@TextColor">
+                    <CascadingValue Name="TextBgColor" Value="@TextBgColor">
+                        @ChildContent
+                    </CascadingValue>
+                </CascadingValue>
+            </CascadingValue>
+        </CascadingValue>
+    </div>
+</div>
+
+<style>
+    #timeline:before {
+        content: "";
+        width: 3px;
+        height: 100%;
+        background: @TitleBgColor;
+        left: 50%;
+        top: 0;
+        position: absolute;
+    }
+    #timeline .timeline-item .timeline-content:before {
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: 20px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid @TitleBgColor;
+     }
+</style>
+
+@code {
+    /// <summary>
+    /// Background color for title section.
+    /// </summary>
+    [Parameter]
+    public string TitleBgColor { get; set; } = "#000FFF";
+    
+    /// <summary>
+    /// Text color for title section.
+    /// </summary>
+    [Parameter]
+    public string TitleColor { get; set; } = "#00FF00";
+    
+    /// <summary>
+    /// Description text color.
+    /// </summary>
+    [Parameter]
+    public string TextColor { get; set; } = "#FFFFFF";
+    
+    /// <summary>
+    /// Description background color.
+    /// </summary>
+    [Parameter]
+    public string TextBgColor { get; set; } = "#212121";
+    
+    /// <summary>
+    /// Timeline title which will be displayed above.
+    /// </summary>
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+}
