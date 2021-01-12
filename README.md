@@ -1,17 +1,30 @@
+[![GitHub license](https://img.shields.io/github/license/Morasiu/BlazorTimeline)](https://github.com/Morasiu/BlazorTimeline/blob/master/LICENSE)
+![Nuget](https://img.shields.io/nuget/v/BlazorTimeline)
+
+
 # BlazorTimeline
 Simple timeline component for Blazor
 
 ![Main image](Images/Main.png)
 
+## It's responsive!
+
 ![Responsive GIF](Images/Responsive.gif)
 
 ## Usage
 
-### 1. Install from [Nuget]()
+### 1. Install from [Nuget](https://www.nuget.org/packages/BlazorTimeline/)
 
+### 2. Add using to your project.
 
-### 1. 
 ```html
+@using BlazorTimeline
+```
+
+### 3. Example code
+```html
+@using BlazorTimeline
+
 <Timeline
     Title="My timeline"
     TitleBgColor="#554DE0"
@@ -36,3 +49,17 @@ Simple timeline component for Blazor
     </TimelineItem>
 </Timeline>
 ```
+
+### Final notes
+
+> If you know some CSS magic I would totally appreciate help to clean up my CSS.
+
+## Thanks
+
+Thanks [Bruno Rodrigues](https://github.com/itbruno) for that code sample! 
+
+[SAMPLE](https://codepen.io/itbruno/pen/KwarLp/?editors=1100)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

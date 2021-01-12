@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae88fd6-e5f3-4342-89b4-7e06a1442599" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BlazorTimeline/ItemPosition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTimeline/Timeline.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTimeline/TimelineItem.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTimeline/TimelineItem.razor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo/wwwroot/Images/kitty.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorTimeline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorTimeline/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +41,8 @@
       <option value="$PROJECT_DIR$/BlazorTimeline/TimelineItem.razor" />
       <option value="$PROJECT_DIR$/BlazorTimeline/ItemPosition.cs" />
       <option value="$PROJECT_DIR$/Demo/Pages/Index.razor" />
-      <option value="$PROJECT_DIR$/../README.md" />
       <option value="$PROJECT_DIR$/BlazorTimeline/BlazorTimeline.csproj" />
+      <option value="$PROJECT_DIR$/../README.md" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mw4IKGRjGhOBuyUZYibPcvz95W" />
@@ -135,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610391239876</updated>
       <workItem from="1610391244350" duration="8920000" />
-      <workItem from="1610446436385" duration="6384000" />
+      <workItem from="1610446436385" duration="7739000" />
     </task>
     <servers />
   </component>
