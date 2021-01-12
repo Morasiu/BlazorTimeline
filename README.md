@@ -11,6 +11,13 @@ Simple timeline component for Blazor
 
 ![Responsive GIF](Images/Responsive.gif)
 
+## Features
+
+* ✅ Simple component
+* ✅ Color customization
+* ✅ Responsive!
+* ✅ You can put anything in the description!
+
 ## Usage
 
 ### 1. Install from [Nuget](https://www.nuget.org/packages/BlazorTimeline/)
@@ -50,9 +57,13 @@ Simple timeline component for Blazor
 </Timeline>
 ```
 
+> There is also a [demo project](https://github.com/Morasiu/BlazorTimeline/tree/master/BlazorTimeline/Demo) in repo.
+
 ### Final notes
 
 > If you know some CSS magic I would totally appreciate help to clean up my CSS.
+
+
 
 ## Thanks
 
