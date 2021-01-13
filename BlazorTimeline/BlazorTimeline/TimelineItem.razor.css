@@ -31,11 +31,9 @@ a {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-}
-#timeline .timeline-item .timeline-icon svg {
-    position: relative;
-    top: 14px;
-    left: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #timeline .timeline-item .timeline-content {
     width: 45%;
