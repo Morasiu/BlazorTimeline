@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.x.x] - 2020-01-12
+## [1.1.0] - 2020-01-13
+
+### Added
+- Box shadow to timeline item. Thanks @DzordzoMen
 
 ### Fixed
 - SVG icon is now  properly centered. Thanks @DzordzoMen

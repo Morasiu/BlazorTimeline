@@ -9,7 +9,7 @@
         <RepositoryUrl>https://github.com/Morasiu/BlazorTimeline</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>blazor, timeline</PackageTags>
-        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <PackageVersion>1.1.0</PackageVersion>
     </PropertyGroup>
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -20,9 +20,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\readme.md"/>
+        <None Include="..\..\readme.md" />
     </ItemGroup>
-    
     
     <ItemGroup>
         <SupportedPlatform Include="browser" />
