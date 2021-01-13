@@ -18,6 +18,8 @@ Simple timeline component for Blazor
 * ✅ Responsive!
 * ✅ You can put anything in the description!
 
+> Checkout [CHANGELOG](CHANGELOG.md) for more info.
+
 ## Usage
 
 ### 1. Install from [Nuget](https://www.nuget.org/packages/BlazorTimeline/)

@@ -42,6 +42,7 @@
       <option value="$PROJECT_DIR$/BlazorTimeline/ItemPosition.cs" />
       <option value="$PROJECT_DIR$/Demo/Pages/Index.razor" />
       <option value="$PROJECT_DIR$/BlazorTimeline/BlazorTimeline.csproj" />
+      <option value="$PROJECT_DIR$/../CHANGELOG.md" />
       <option value="$PROJECT_DIR$/../README.md" />
     </changedPaths>
   </component>
