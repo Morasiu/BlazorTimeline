@@ -39,10 +39,10 @@ a {
     width: 45%;
     background: #fff;
     padding: 20px;
-    -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.57);;
+    -moz-box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.57);
+    -ms-box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.57);
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.57);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
