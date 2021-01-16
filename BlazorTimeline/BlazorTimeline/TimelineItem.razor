@@ -82,9 +82,7 @@
     /// </summary>
     [Parameter]
     public string Title { get; set; }
-
-
-    
+   
     [Parameter]
     public string Time { get; set; }
     
@@ -97,17 +95,31 @@
     [Parameter]
     public ItemPosition Position { get; set; }
 
-
+    [CascadingParameter(Name = nameof(Timeline))]
+    public Timeline Timeline { get; set; }
     
-    [CascadingParameter(Name = "TitleBgColor")]
+    [CascadingParameter(Name = nameof(TitleBgColor))]
     protected string TitleBgColor { get; set; }
 
-    [CascadingParameter(Name = "TitleColor")]
+    [CascadingParameter(Name = nameof(TitleColor))]
     protected string TitleColor { get; set; }
 
-    [CascadingParameter(Name = "TextColor")]
+    [CascadingParameter(Name = nameof(TextColor))]
     protected string TextColor { get; set; }
     
-    [CascadingParameter(Name = "TextBgColor")]
+    [CascadingParameter(Name = nameof(TextBgColor))]
     protected string TextBgColor { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        if (Timeline == null)
+            throw new ArgumentNullException(nameof(Timeline),"Must be used within Timeline");
+        Timeline.AddTimelineItem(this);
+    }
+
+    public override Task SetParametersAsync(ParameterView parameters) {
+        Position = parameters.GetValueOrDefault<ItemPosition>(nameof(Position));
+        return base.SetParametersAsync(parameters);
+    }
+
 }

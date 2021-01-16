@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.x.x] - TBA
+
+## [1.2.0] - 2020-01-16
+
+### Added
+- New property `ItemPositionOption` to Timeline. Now it can do auto altering left and right!
+
 ## [1.1.0] - 2020-01-13
 
 ### Added

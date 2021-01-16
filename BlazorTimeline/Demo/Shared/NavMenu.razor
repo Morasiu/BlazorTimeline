@@ -1,4 +1,5 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@using Demo.Pages
+<div class="top-row pl-4 navbar navbar-dark">
     <a class="navbar-brand" href="">Demo</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
@@ -10,6 +11,11 @@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="@nameof(AlteringTimeline)" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Altering timeline
             </NavLink>
         </li>
     </ul>

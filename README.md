@@ -39,13 +39,14 @@ Simple timeline component for Blazor
     TitleBgColor="#554DE0"
     TitleColor="#FFFFFF"
     TextColor="#F3F3F3"
-    TextBgColor="#212121">
+    TextBgColor="#212121"
+    ItemPositionOption="@ItemPositionOption.AutoAltering">
     
     <TimelineItem Title="First item" Time="01.01.2020" ButtonText="Github" Link="https://github.com/">
         Here we can write description :) And even add some buttons!
     </TimelineItem>
 
-    <TimelineItem Title="Second item" Position="ItemPosition.Right">
+    <TimelineItem Title="Second item">
         <span>Timeline item can be altered to appear on the right! </span>
 
         <span>And we can add anything here :)</span> <br/>

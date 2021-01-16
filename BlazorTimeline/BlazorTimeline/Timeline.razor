@@ -1,11 +1,13 @@
 ﻿<div class="container">
     <h1 class="project-name">@Title</h1>
     <div id="timeline" style=":before ">
-        <CascadingValue Name="TitleBgColor" Value="@TitleBgColor">
-            <CascadingValue Name="TitleColor" Value="@TitleColor">
-                <CascadingValue Name="TextColor" Value="@TextColor">
-                    <CascadingValue Name="TextBgColor" Value="@TextBgColor">
-                        @ChildContent
+        <CascadingValue Name="@nameof(TitleBgColor)" Value="@TitleBgColor">
+            <CascadingValue Name="@nameof(TitleColor)" Value="@TitleColor">
+                <CascadingValue Name="@nameof(TextColor)" Value="@TextColor">
+                    <CascadingValue Name="@nameof(TextBgColor)" Value="@TextBgColor">
+                        <CascadingValue Name="@nameof(Timeline)" Value="@this">
+                            @ChildContent
+                        </CascadingValue>
                     </CascadingValue>
                 </CascadingValue>
             </CascadingValue>
@@ -37,37 +39,71 @@
 </style>
 
 @code {
+
     /// <summary>
     /// Background color for title section.
     /// </summary>
     [Parameter]
     public string TitleBgColor { get; set; } = "#000FFF";
-    
+
     /// <summary>
     /// Text color for title section.
     /// </summary>
     [Parameter]
     public string TitleColor { get; set; } = "#00FF00";
-    
+
     /// <summary>
     /// Description text color.
     /// </summary>
     [Parameter]
     public string TextColor { get; set; } = "#FFFFFF";
-    
+
     /// <summary>
     /// Description background color.
     /// </summary>
     [Parameter]
     public string TextBgColor { get; set; } = "#212121";
-    
+
     /// <summary>
     /// Timeline title which will be displayed above.
     /// </summary>
     [Parameter]
     public string Title { get; set; }
 
+    /// <summary>
+    /// Should items be altered automatically or manual.
+    /// </summary>
+    [Parameter]
+    public ItemPositionOption ItemPositionOption { get; set; } = ItemPositionOption.AutoAltering;
+
     [Parameter]
     public RenderFragment ChildContent { get; set; }
+
+    private List<TimelineItem> _timelineItems = new List<TimelineItem>();
+
+    internal void AddTimelineItem(TimelineItem item) {
+        _timelineItems.Add(item);
+    }
+
+    protected override Task OnAfterRenderAsync(bool firstRender) {
+        if (ItemPositionOption == ItemPositionOption.AutoAltering) {
+            for (int i = 0; i < _timelineItems.Count; i++) {
+                var item = _timelineItems[i];
+                ItemPosition position;
+
+                if (i % 2 == 0)
+                    position = ItemPosition.Left;
+                else
+                    position = ItemPosition.Right;
+
+                var parameters = new Dictionary<string, object>() {
+                    {nameof(TimelineItem.Position), position}
+                };
+                item.SetParametersAsync(ParameterView.FromDictionary(parameters));
+            }
+        }
+
+        return base.OnAfterRenderAsync(firstRender);
+    }
 
 }

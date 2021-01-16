@@ -9,8 +9,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="BlazorTimeline.csproj" t="IncludeRecursive" />
         <e p="ItemPosition.cs" t="Include" />
+        <e p="ItemPositionOption.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Release" t="Include">
+          <e p="Debug" t="Include">
             <e p="net5.0" t="Include">
               <e p="BlazorTimeline.AssemblyInfo.cs" t="Include" />
             </e>
@@ -29,13 +30,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Demo.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
-          <e p="Release" t="Include">
+          <e p="Debug" t="Include">
             <e p="net5.0" t="Include">
               <e p="Demo.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
         <e p="Pages" t="Include">
+          <e p="AlteringTimeline.razor" t="Include" />
           <e p="Index.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
