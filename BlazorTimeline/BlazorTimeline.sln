@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTimeline", "BlazorTim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{2EC44A27-2648-4A1E-989D-5914EDC4D170}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D7642D6D-77D5-488F-883E-DEC9EAC4C913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{2EC44A27-2648-4A1E-989D-5914EDC4D170}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EC44A27-2648-4A1E-989D-5914EDC4D170}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EC44A27-2648-4A1E-989D-5914EDC4D170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7642D6D-77D5-488F-883E-DEC9EAC4C913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7642D6D-77D5-488F-883E-DEC9EAC4C913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7642D6D-77D5-488F-883E-DEC9EAC4C913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7642D6D-77D5-488F-883E-DEC9EAC4C913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

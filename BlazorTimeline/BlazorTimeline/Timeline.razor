@@ -1,42 +1,15 @@
 ﻿<div class="container">
     <h1 class="project-name">@Title</h1>
-    <div id="timeline" style=":before ">
-        <CascadingValue Name="@nameof(TitleBgColor)" Value="@TitleBgColor">
-            <CascadingValue Name="@nameof(TitleColor)" Value="@TitleColor">
-                <CascadingValue Name="@nameof(TextColor)" Value="@TextColor">
-                    <CascadingValue Name="@nameof(TextBgColor)" Value="@TextBgColor">
-                        <CascadingValue Name="@nameof(Timeline)" Value="@this">
-                            @ChildContent
-                        </CascadingValue>
-                    </CascadingValue>
-                </CascadingValue>
-            </CascadingValue>
+    <div id="timeline" style="
+    --title-bg: @TitleBgColor; 
+    --title-color: @TitleColor; 
+    --text-color: @TextColor;
+    --text-bg: @TextBgColor">
+        <CascadingValue Name="@nameof(Timeline)" Value="@this">
+            @ChildContent
         </CascadingValue>
     </div>
 </div>
-
-<style>
-    #timeline:before {
-        content: "";
-        width: 3px;
-        height: 100%;
-        background: @TitleBgColor;
-        left: 50%;
-        top: 0;
-        position: absolute;
-    }
-    #timeline .timeline-item .timeline-content:before {
-        content: '';
-        position: absolute;
-        left: 45%;
-        top: 20px;
-        width: 0;
-        height: 0;
-        border-top: 7px solid transparent;
-        border-bottom: 7px solid transparent;
-        border-left: 7px solid @TitleBgColor;
-     }
-</style>
 
 @code {
 

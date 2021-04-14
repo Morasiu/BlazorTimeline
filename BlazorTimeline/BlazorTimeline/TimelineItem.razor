@@ -1,5 +1,5 @@
 ﻿<div class="timeline-item">
-    <div class="timeline-icon" style="background: @TitleBgColor">
+    <div class="timeline-icon">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
             <path fill="#FFFFFF" d="M19.998,6.766l-5.759-0.544c-0.362-0.032-0.676-0.264-0.822-0.61l-2.064-4.999
@@ -9,8 +9,8 @@
 	c-0.081-0.365,0.035-0.729,0.313-0.975l4.34-3.811C21.219,7.921,20.855,6.848,19.998,6.766z"/>
         </svg>
     </div>
-    <div class="timeline-content @(Position == ItemPosition.Right ? "right" : "")" style="background: @TextBgColor; color: @TextColor">
-        <div class="item-title" style="background: @TitleBgColor; color: @TitleColor">
+    <div class="timeline-content @(Position == ItemPosition.Right ? "right" : "")">
+        <div class="item-title">
             <h2>@Title</h2>
             <span><i>@Time</i></span>
         </div>
@@ -22,55 +22,6 @@
         }
     </div>
 </div>
-
-<style>
-#timeline .timeline-item .timeline-content.right:before {
-    content: '';
-    right: 45%;
-    left: inherit;
-    border-left: 0;
-    border-right: 7px solid @TitleBgColor;
-}
-
-.btn {
-    padding: 5px 15px;
-    text-decoration: none;
-    background: transparent;
-    border: 2px solid @TitleBgColor;
-    color: @TitleBgColor;
-    display: inline-block;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 12px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    transition: background 0.3s ease;
-    -webkit-box-shadow: 2px 2px 0 @TitleBgColor;
-    -moz-box-shadow: 2px 2px 0 @TitleBgColor;
-    -ms-box-shadow: 2px 2px 0 @TitleBgColor;
-    box-shadow: 2px 2px 0 @TitleBgColor;
-}
-
-@@media screen and (max-width: 768px) {
-   #timeline .timeline-item .timeline-content {
-        width: 90%;
-        float: right;
-    }
-    #timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
-            border-right: 7px solid @TitleBgColor;
-    }
-        #timeline .timeline-item .timeline-icon {
-            left: 0;
-        }
-}
-
-
-</style>
 
 @code {
 
@@ -97,18 +48,6 @@
 
     [CascadingParameter(Name = nameof(Timeline))]
     public Timeline Timeline { get; set; }
-    
-    [CascadingParameter(Name = nameof(TitleBgColor))]
-    protected string TitleBgColor { get; set; }
-
-    [CascadingParameter(Name = nameof(TitleColor))]
-    protected string TitleColor { get; set; }
-
-    [CascadingParameter(Name = nameof(TextColor))]
-    protected string TextColor { get; set; }
-    
-    [CascadingParameter(Name = nameof(TextBgColor))]
-    protected string TextBgColor { get; set; }
     
     protected override void OnInitialized()
     {
