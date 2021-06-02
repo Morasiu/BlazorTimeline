@@ -9,7 +9,10 @@
         <RepositoryUrl>https://github.com/Morasiu/BlazorTimeline</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>blazor, timeline</PackageTags>
-        <PackageVersion>1.2.0</PackageVersion>
+        <PackageVersion>1.2.1</PackageVersion>
+        <Description>Responsive, vertical timeline component.
+
+</Description>
     </PropertyGroup>
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

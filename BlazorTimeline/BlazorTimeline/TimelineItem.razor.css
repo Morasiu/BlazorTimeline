@@ -104,7 +104,7 @@ p {
     color: var(--title-color)
 }
 
-.btn {
+.timeline-button {
     padding: 5px 15px;
     text-decoration: none;
     background: transparent;

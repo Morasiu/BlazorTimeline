@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.x.x] - TBA
 
+## [1.2.1] - 2020-06-02
+
+### Fixed
+- Issue with colliding bootstrap class with timeline button class
+
 ## [1.2.0] - 2020-01-16
 
 ### Added
