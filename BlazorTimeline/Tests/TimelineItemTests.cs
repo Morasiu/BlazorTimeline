@@ -85,7 +85,7 @@ namespace Tests {
 				p.AddChildContent<TimelineItem>());
 			var timelineItem = component.FindComponent<TimelineItem>();
 			var timelineContent = timelineItem.Find("div");
-			var buttons = timelineContent.GetElementsByClassName("btn");
+			var buttons = timelineContent.GetElementsByClassName("timeline-button");
 			// Assert
 			buttons.Should().HaveCount(0);
 		}
@@ -99,7 +99,7 @@ namespace Tests {
 				p.AddChildContent<TimelineItem>(a => a.Add(t => t.ButtonText, expected)));
 			var timelineItem = component.FindComponent<TimelineItem>();
 			var timelineContent = timelineItem.Find("div").GetElementsByClassName("timeline-content")[0];
-			var buttons = timelineContent.GetElementsByClassName("btn");
+			var buttons = timelineContent.GetElementsByClassName("timeline-button");
 			// Assert
 			buttons.Should().HaveCount(1);
 			buttons[0].Text().Should().Be(expected);
@@ -117,7 +117,7 @@ namespace Tests {
 				}));
 			var timelineItem = component.FindComponent<TimelineItem>();
 			var timelineContent = timelineItem.Find("div").GetElementsByClassName("timeline-content")[0];
-			var buttons = timelineContent.GetElementsByClassName("btn");
+			var buttons = timelineContent.GetElementsByClassName("timeline-button");
 			// Assert
 			buttons.Should().HaveCount(1);
 			buttons[0].Attributes.Single(a => a.Name == "href").Value.Should().Be(expected);
