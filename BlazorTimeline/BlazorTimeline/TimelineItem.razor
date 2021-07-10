@@ -1,6 +1,6 @@
 ﻿<div class="timeline-item">
     <div class="timeline-icon">
-        @if (IconContent == null)
+        @if (IconContent != null)
         {
             @IconContent
         }
@@ -24,7 +24,8 @@
         <p>
             @ChildContent
         </p>
-        @if (!string.IsNullOrEmpty(ButtonText)) {
+        @if (!string.IsNullOrEmpty(ButtonText))
+        {
             <a href="@Link" class="timeline-button">@ButtonText</a>
         }
     </div>
@@ -64,6 +65,11 @@
         if (Timeline == null)
             throw new ArgumentNullException(nameof(Timeline),"Must be used within Timeline");
         Timeline.AddTimelineItem(this);
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
     }
 
     public override Task SetParametersAsync(ParameterView parameters) {
