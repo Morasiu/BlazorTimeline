@@ -67,11 +67,6 @@
         Timeline.AddTimelineItem(this);
     }
 
-    protected override void OnParametersSet()
-    {
-        base.OnParametersSet();
-    }
-
     public override Task SetParametersAsync(ParameterView parameters) {
         Position = parameters.GetValueOrDefault<ItemPosition>(nameof(Position));
         return base.SetParametersAsync(parameters);
