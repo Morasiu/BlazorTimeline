@@ -35,6 +35,7 @@
         <e p="TimelineItem.razor.css" t="Include" />
         <e p="wwwroot" t="Include">
           <e p=".gitkeep" t="Include" />
+          <e p="default_icon.svg" t="Include" />
         </e>
       </e>
       <e p="BlazorTimeline.sln" t="IncludeFlat" />
