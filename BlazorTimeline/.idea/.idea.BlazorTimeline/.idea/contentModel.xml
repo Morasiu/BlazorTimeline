@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.net.test.sdk\16.10.0\build\netcoreapp2.1" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
-    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
-    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
-    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
-    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
-    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
-    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\3.16.1\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.testplatform.testhost\16.10.0\build\netcoreapp2.1\x64\Microsoft.TestPlatform.PlatformAbstractions.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.testplatform.testhost\16.10.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\microsoft.testplatform.testhost\16.10.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\nunit.engine.core.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\Morasiu\.nuget\packages\nunit3testadapter\4.0.0\build\netcoreapp2.1\testcentric.engine.metadata.dll" t="Include" />
     <e p="C:\Users\Morasiu\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Morasiu\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_BlazorTimeline.-537033745.00" t="ExcludeRecursive" />
     <e p="D:\Projekty\BlazorTimeline\BlazorTimeline" t="IncludeFlat">
@@ -30,7 +33,9 @@
         <e p="Timeline.razor.css" t="Include" />
         <e p="TimelineItem.razor" t="Include" />
         <e p="TimelineItem.razor.css" t="Include" />
-        <e p="wwwroot" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p=".gitkeep" t="Include" />
+        </e>
       </e>
       <e p="BlazorTimeline.sln" t="IncludeFlat" />
       <e p="Demo" t="IncludeRecursive">
