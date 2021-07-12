@@ -68,7 +68,7 @@ namespace Tests {
 		[Test]
 		public void TimelineItem_WithoutIconContent_ShouldRenderDefaultIcon() {
 			// Arrange
-			var iconPath = "./default_icon.svg";
+			var iconPath = "_content/BlazorTimeline/default_icon.svg";
 			// Act
 			var component = _context.RenderComponent<Timeline>(p =>
 				p.AddChildContent<TimelineItem>());
