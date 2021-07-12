@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.x.x] - TBA
 
+## [1.3.1] - 2021-07-12
+
+### Fixed
+- Now static icon is embedded 
+
 ## [1.3.0] - 2021-07-12
 
 ### Added

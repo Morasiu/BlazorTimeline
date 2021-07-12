@@ -6,7 +6,8 @@
         }
         else
         {
-            <img src="./default_icon.svg" alt="Default timeline icon" />
+            // Doing this you can include assets in lib in Blazor
+            <img src="_content/BlazorTimeline/default_icon.svg" alt="Default timeline icon" />
         }
     </div>
     <div class="timeline-content @(Position == ItemPosition.Right ? "right" : "")">
