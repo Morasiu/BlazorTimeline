@@ -5,7 +5,7 @@
     --title-color: @TitleColor; 
     --text-color: @TextColor;
     --text-bg: @TextBgColor">
-        <CascadingValue Name="@nameof(Timeline)" Value="@this">
+        <CascadingValue Name="@nameof(Timeline)" Value="@this" IsFixed="true">
             @ChildContent
         </CascadingValue>
     </div>

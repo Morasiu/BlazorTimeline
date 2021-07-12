@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.x.x] - TBA
 
+## [1.3.0] - 2021-07-12
+
+### Added
+- Support for custom icon in Timeline Item
+
+
 ## [1.2.1] - 2020-06-02
 
 ### Fixed

@@ -1,5 +1,8 @@
 using System;
+using System.IO;
 using System.Linq;
+using System.Net;
+using AngleSharp;
 using AngleSharp.Dom;
 using BlazorTimeline;
 using Bunit;
@@ -60,6 +63,35 @@ namespace Tests {
 			// Assert
 			timelineItem.Instance.Title.Should().Be(expected);
 			title.Text().Should().Be(expected);
+		}
+		
+		[Test]
+		public void TimelineItem_WithoutIconContent_ShouldRenderDefaultIcon() {
+			// Arrange
+			var iconPath = "./default_icon.svg";
+			// Act
+			var component = _context.RenderComponent<Timeline>(p =>
+				p.AddChildContent<TimelineItem>());
+			var timelineItem = component.FindComponent<TimelineItem>();
+			var iconDiv = timelineItem.Find("div").GetElementsByClassName("timeline-icon")[0];
+			var icon = iconDiv.GetElementsByTagName("img")[0];
+			// Assert
+			timelineItem.Instance.IconContent.Should().BeNull();
+			icon.GetAttribute("src").Should().Be(iconPath);
+		}
+		
+		[Test]
+		public void TimelineItem_WithIconContent_ShouldRenderCustomIcon() {
+			// Arrange
+			var customIcon = "<svg><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"black\" stroke-width=\"3\" fill=\"red\"></circle></svg>";
+			// Act
+			var component = _context.RenderComponent<Timeline>(p =>
+				p.AddChildContent<TimelineItem>(builder => builder.Add(a => a.IconContent, customIcon)));
+			var timelineItem = component.FindComponent<TimelineItem>();
+			var iconDiv = timelineItem.Find("div").GetElementsByClassName("timeline-icon")[0];
+			// Assert
+			timelineItem.Instance.IconContent.Should().NotBeNull();
+			iconDiv.InnerHtml.Should().Be(customIcon);
 		}
 
 		[Test]

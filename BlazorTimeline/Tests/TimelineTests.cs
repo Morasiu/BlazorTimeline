@@ -181,7 +181,7 @@ namespace Tests {
 			// Act
 			var component = _context.RenderComponent<Timeline>(p => {
 				p.AddChildContent<TimelineItem>();
-				p.AddChildContent<TimelineItem>(a => a.Add(a => a.Position, ItemPosition.Left));
+				p.AddChildContent<TimelineItem>(a => a.Add(tlitem => tlitem.Position, ItemPosition.Left));
 			});
 			var timelineItems = component.FindComponents<TimelineItem>();
 			timelineItems.Should().HaveCount(2);
@@ -197,13 +197,13 @@ namespace Tests {
 			// Act
 			var component = _context.RenderComponent<Timeline>(p => {
 				p.Add(a => a.ItemPositionOption, ItemPositionOption.Manual);
-				p.AddChildContent<TimelineItem>(a => a.Add(a => a.Position, ItemPosition.Right));
-				p.AddChildContent<TimelineItem>(a => a.Add(a => a.Position, ItemPosition.Left));
+				p.AddChildContent<TimelineItem>(a => a.Add(tlitem => tlitem.Position, ItemPosition.Right));
+				p.AddChildContent<TimelineItem>(a => a.Add(tlitem => tlitem.Position, ItemPosition.Left));
 			});
 			var timelineItems = component.FindComponents<TimelineItem>();
 			timelineItems.Should().HaveCount(2);
-			var firstTimelineContent = timelineItems[0].Find("div").GetElementsByClassName("timeline-content")[0];;
-			var secondTimelineContent = timelineItems[1].Find("div").GetElementsByClassName("timeline-content")[0];;
+			var firstTimelineContent = timelineItems[0].Find("div").GetElementsByClassName("timeline-content")[0];
+			var secondTimelineContent = timelineItems[1].Find("div").GetElementsByClassName("timeline-content")[0];
 			// Assert
 			firstTimelineContent.ClassList.Should().Contain(a => a == "right");
 			secondTimelineContent.ClassList.Should().NotContain(a => a == "right");
