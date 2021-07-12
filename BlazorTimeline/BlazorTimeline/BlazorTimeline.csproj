@@ -9,10 +9,14 @@
         <RepositoryUrl>https://github.com/Morasiu/BlazorTimeline</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>blazor, timeline</PackageTags>
-        <PackageVersion>1.2.1</PackageVersion>
+        <PackageVersion>1.3.0</PackageVersion>
         <Description>Responsive, vertical timeline component.
 
 </Description>
+        <PackageReleaseNotes>## [1.3.0] - 2021-07-12
+
+### Added
+- Support for custom icon in Timeline Item</PackageReleaseNotes>
     </PropertyGroup>
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
