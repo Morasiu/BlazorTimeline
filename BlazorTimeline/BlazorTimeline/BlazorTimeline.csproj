@@ -9,14 +9,14 @@
         <RepositoryUrl>https://github.com/Morasiu/BlazorTimeline</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>blazor, timeline</PackageTags>
-        <PackageVersion>1.3.1</PackageVersion>
+        <PackageVersion>1.3.2</PackageVersion>
         <Description>Responsive, vertical timeline component.
 
-</Description>
-        <PackageReleaseNotes>## [1.3.1] - 2021-07-12
+        </Description>
+        <PackageReleaseNotes>## [1.3.2] - 2021-08-11
 
 ### Fixed
-- Now static icon is embedded </PackageReleaseNotes>
+- Publishing error. See that Issue for more info: https://github.com/Morasiu/BlazorTimeline/issues/7</PackageReleaseNotes>
     </PropertyGroup>
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -24,12 +24,17 @@
 
     <PropertyGroup>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\readme.md" />
+        <None Include="../../README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
-    
+
     <ItemGroup>
         <SupportedPlatform Include="browser" />
     </ItemGroup>
@@ -39,11 +44,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Include="wwwroot\default_icon.svg">
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </EmbeddedResource>
+        <EmbeddedResource Include="wwwroot\default_icon.svg">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
     </ItemGroup>
 
 </Project>
