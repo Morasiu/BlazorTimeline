@@ -1,0 +1,35 @@
+﻿@page "/AlteringTimeline"
+
+<Timeline
+    Title="Historique"
+    TitleBgColor="#554DE0"
+    TitleColor="#FFFFFF"
+    TextColor="#F3F3F3"
+    TextBgColor="#212121"
+    ItemPositionOption="@ItemPositionOption.Manual">
+
+    @foreach (var item in _timelineItems) {
+        <TimelineItem Title="Entrée" Time="@item.DateEvenement.ToString("D")"
+                      Position="@(_timelineItems.IndexOf(item) % 2 == 0 ? ItemPosition.Left : ItemPosition.Right)">
+
+            <p>@item.Details</p>
+        </TimelineItem>
+    }
+</Timeline>
+
+@code {
+
+    private List<ItemData> _timelineItems = new List<ItemData> {
+        new ItemData(), 
+        new ItemData(), 
+        new ItemData(), 
+        new ItemData(), 
+        new ItemData()
+    };
+
+    private class ItemData {
+        public DateTime DateEvenement = DateTime.Now;
+        public string Details = Guid.NewGuid().ToString();
+    }
+
+}
