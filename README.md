@@ -1,5 +1,6 @@
 [![GitHub license](https://img.shields.io/github/license/Morasiu/BlazorTimeline)](https://github.com/Morasiu/BlazorTimeline/blob/master/LICENSE)
 [![Nuget](https://img.shields.io/nuget/v/BlazorTimeline)](https://www.nuget.org/packages/BlazorTimeline/)
+[![Nuget](https://img.shields.io/nuget/dt/BlazorTimeline)](https://www.nuget.org/packages/BlazorTimeline/)
 
 
 # BlazorTimeline
